@@ -1,5 +1,9 @@
 import React from 'react';
 
 export default function Square({ value, onBoxClick }) {
-  return <h1>Hi</h1>;
+  return (
+    <button className="box" onClick={onBoxClick}>
+      {value}
+    </button>
+  );
 }
