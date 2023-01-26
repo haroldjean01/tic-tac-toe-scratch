@@ -4,7 +4,17 @@ import './Box/Box.css';
 export default function Box({ value, onBoxClick }) {
   return (
     <>
-      <div className="board-row">
+      <div>
+        <button className="box" onClick={onBoxClick}>
+          {value}
+        </button>
+        {/* <button className="box" onClick={onBoxClick}>
+          {value}
+        </button>
+        <button className="box" onClick={onBoxClick}>
+          {value}
+        </button>
+
         <button className="box" onClick={onBoxClick}>
           {value}
         </button>
@@ -23,17 +33,7 @@ export default function Box({ value, onBoxClick }) {
         </button>
         <button className="box" onClick={onBoxClick}>
           {value}
-        </button>
-
-        <button className="box" onClick={onBoxClick}>
-          {value}
-        </button>
-        <button className="box" onClick={onBoxClick}>
-          {value}
-        </button>
-        <button className="box" onClick={onBoxClick}>
-          {value}
-        </button>
+        </button> */}
       </div>
     </>
   );

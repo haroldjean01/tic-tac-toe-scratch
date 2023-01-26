@@ -1,7 +1,12 @@
 import './App.css';
-import Box from './component/Box.js';
+import Board from './component/Board/Board.js';
+// import Box from './component/Box.js';
 function App() {
-  return <Box />;
+  return (
+    <div className="alpha-container">
+      <Board />
+    </div>
+  );
 }
 
 export default App;
