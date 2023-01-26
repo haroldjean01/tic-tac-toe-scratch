@@ -3,8 +3,40 @@ import './Box/Box.css';
 
 export default function Box({ value, onBoxClick }) {
   return (
-    <button className="box" onClick={onBoxClick}>
-      {value}
-    </button>
+    <>
+      <div className="board-row">
+        <button className="box" onClick={onBoxClick}>
+          {value}
+        </button>
+        <button className="box" onClick={onBoxClick}>
+          {value}
+        </button>
+        <button className="box" onClick={onBoxClick}>
+          {value}
+        </button>
+      </div>
+      <div className="board-row">
+        <button className="box" onClick={onBoxClick}>
+          {value}
+        </button>
+        <button className="box" onClick={onBoxClick}>
+          {value}
+        </button>
+        <button className="box" onClick={onBoxClick}>
+          {value}
+        </button>
+      </div>
+      <div className="board-row">
+        <button className="box" onClick={onBoxClick}>
+          {value}
+        </button>
+        <button className="box" onClick={onBoxClick}>
+          {value}
+        </button>
+        <button className="box" onClick={onBoxClick}>
+          {value}
+        </button>
+      </div>
+    </>
   );
 }
