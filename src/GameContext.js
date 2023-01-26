@@ -1,8 +1,14 @@
-import React, { createContext } from 'react';
+import React, { createContext, useState } from 'react';
 
 const GameContext = createContext();
 const GameProvider = ({ children }) => {
-  return <GameProvider.Provider>{children}</GameProvider.Provider>;
+  const [currentPlayer, setCurrentPlayer] = useState();
+  const [gameMessage, setGameMessage] = useState();
+  return (
+    <GameProvider.Provider value={{ currentPlayer, setCurrentPlayer, gameMessage, setGameMessage }}>
+      {children}
+    </GameProvider.Provider>
+  );
 };
 
 export { GameContext, GameProvider };
