@@ -14,8 +14,7 @@ export default function Box({ value, onBoxClick }) {
         <button className="box" onClick={onBoxClick}>
           {value}
         </button>
-      </div>
-      <div className="board-row">
+
         <button className="box" onClick={onBoxClick}>
           {value}
         </button>
@@ -25,8 +24,7 @@ export default function Box({ value, onBoxClick }) {
         <button className="box" onClick={onBoxClick}>
           {value}
         </button>
-      </div>
-      <div className="board-row">
+
         <button className="box" onClick={onBoxClick}>
           {value}
         </button>

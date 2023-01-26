@@ -1,10 +1,20 @@
 .box {
   align-items: center;
-  background-color: #483d8b;
+  background: linear-gradient(to bottom right, red, yellow);
   display: flex;
   font-size: 4rem;
   font-weight: 700;
   justify-content: center;
   height: 190px;
   width: 190px;
+}
+
+.board-row {
+  border: 5px solid #fff;
+  border-radius: 20px;
+  color: #fff;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  height: 600px;
+  width: 600px;
 }
