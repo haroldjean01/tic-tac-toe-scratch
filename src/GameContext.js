@@ -6,11 +6,11 @@ const GameProvider = ({ children }) => {
   const [gameMessage, setGameMessage] = useState();
   const [active, setActive] = useState();
   return (
-    <GameProvider.Provider
+    <GameContext.Provider
       value={{ currentPlayer, setCurrentPlayer, gameMessage, setGameMessage, active, setActive }}
     >
       {children}
-    </GameProvider.Provider>
+    </GameContext.Provider>
   );
 };
 

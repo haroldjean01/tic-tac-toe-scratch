@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function Box() {
-  return <div>Box</div>;
+  return <h1>Box</h1>;
 }
