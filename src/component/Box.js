@@ -1,10 +1,10 @@
 import React from 'react';
 import './Box/Box.css';
-import { useState } from 'react';
+import { GameContext } from '../GameContext.js';
+import { useContext } from 'react';
 
 export default function Box() {
-  const [value, setValue] = useState(null);
-
+  const { value, setValue } = useContext(GameContext);
   function onBoxClick() {
     setValue('X');
   }
