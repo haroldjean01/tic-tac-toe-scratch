@@ -8,7 +8,7 @@ export default function Board() {
   return (
     <div className="board-row">
       {board.map((gameBoard) => (
-        <Box key={gameBoard.space} content={gameBoard.content} />
+        <Box key={gameBoard.space} content={gameBoard.content} space={gameBoard.space} />
       ))}
     </div>
   );
