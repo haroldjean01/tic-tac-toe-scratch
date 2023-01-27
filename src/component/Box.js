@@ -4,7 +4,7 @@ import { GameContext } from '../GameContext.js';
 import { useContext } from 'react';
 
 export default function Box({ content, space }) {
-  const { setBoard, currentPlayer } = useContext(GameContext);
+  const { setBoard, currentPlayer, setCurrentPlayer } = useContext(GameContext);
 
   function onBoxClick() {
     setBoard((currentBoard) => {
@@ -21,7 +21,12 @@ export default function Box({ content, space }) {
         }
       });
     });
-    // setCurrentPlayer('O');
+
+    if (currentPlayer === 'O') {
+      setCurrentPlayer('X');
+    } else {
+      setCurrentPlayer('O');
+    }
   }
   return (
     <>
