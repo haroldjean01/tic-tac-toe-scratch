@@ -4,9 +4,10 @@ import { GameContext } from '../GameContext.js';
 import { useContext } from 'react';
 
 export default function Box({ content, space }) {
-  const { setBoard, currentPlayer, setCurrentPlayer } = useContext(GameContext);
+  const { board, setBoard, currentPlayer, setCurrentPlayer } = useContext(GameContext);
 
   function onBoxClick() {
+    if (board[space - 1].content !== '') return;
     setBoard((currentBoard) => {
       // always need to return a NEW array
       // .map returns a new array
