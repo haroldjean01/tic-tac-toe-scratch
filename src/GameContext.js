@@ -25,6 +25,70 @@ const GameProvider = ({ children }) => {
       setActive(false);
       setGameMessage('You Win!');
     }
+    if (
+      board[3].content === board[4].content &&
+      board[4].content === board[5].content &&
+      board[5].content !== ''
+    ) {
+      setActive(false);
+      setGameMessage('You Win!');
+    }
+    if (
+      board[6].content === board[7].content &&
+      board[7].content === board[8].content &&
+      board[8].content !== ''
+    ) {
+      setActive(false);
+      setGameMessage('You Win!');
+    }
+    if (
+      board[0].content === board[4].content &&
+      board[4].content === board[8].content &&
+      board[8].content !== ''
+    ) {
+      setActive(false);
+      setGameMessage('You Win!');
+    }
+    if (
+      board[2].content === board[4].content &&
+      board[4].content === board[6].content &&
+      board[6].content !== ''
+    ) {
+      setActive(false);
+      setGameMessage('You Win!');
+    }
+    if (
+      board[3].content === board[4].content &&
+      board[4].content === board[5].content &&
+      board[5].content !== ''
+    ) {
+      setActive(false);
+      setGameMessage('You Win!');
+    }
+    if (
+      board[0].content === board[3].content &&
+      board[3].content === board[6].content &&
+      board[6].content !== ''
+    ) {
+      setActive(false);
+      setGameMessage('You Win!');
+    }
+    if (
+      board[1].content === board[4].content &&
+      board[4].content === board[7].content &&
+      board[7].content !== ''
+    ) {
+      setActive(false);
+      setGameMessage('You Win!');
+    }
+    if (
+      board[2].content === board[5].content &&
+      board[5].content === board[8].content &&
+      board[8].content !== ''
+    ) {
+      setActive(false);
+      setGameMessage('You Win!');
+    }
   }
   if (active) {
     checkWinner();
