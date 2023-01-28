@@ -93,6 +93,7 @@ const GameProvider = ({ children }) => {
   if (active) {
     checkWinner();
   }
+
   return (
     <GameContext.Provider
       value={{
