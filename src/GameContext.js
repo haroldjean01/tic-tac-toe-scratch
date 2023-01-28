@@ -3,7 +3,7 @@ import React, { createContext, useState } from 'react';
 const GameContext = createContext();
 const GameProvider = ({ children }) => {
   const [currentPlayer, setCurrentPlayer] = useState('X');
-  const [gameMessage, setGameMessage] = useState();
+  const [gameMessage, setGameMessage] = useState('');
   const [active, setActive] = useState(true);
   const [board, setBoard] = useState([
     { space: 1, content: '' },
@@ -16,6 +16,7 @@ const GameProvider = ({ children }) => {
     { space: 8, content: '' },
     { space: 9, content: '' },
   ]);
+
   function checkWinner() {
     if (
       board[0].content === board[1].content &&
