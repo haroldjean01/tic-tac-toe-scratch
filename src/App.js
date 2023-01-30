@@ -1,24 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Board from './component/Board/Board.js';
+import { GameContext } from './GameContext.js';
+import { useContext } from 'react';
+// import Box from './component/Box.js';
 function App() {
+  const { setBoard, setActive, setGameMessage, setCurrentPlayer } = useContext(GameContext);
+  function resetButton() {
+    setGameMessage();
+    setActive(true);
+    setCurrentPlayer('X');
+    setBoard([
+      { space: 1, content: '' },
+      { space: 2, content: '' },
+      { space: 3, content: '' },
+      { space: 4, content: '' },
+      { space: 5, content: '' },
+      { space: 6, content: '' },
+      { space: 7, content: '' },
+      { space: 8, content: '' },
+      { space: 9, content: '' },
+    ]);
+  }
+  // resetButton();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="alpha-container">
+        <Board />
+      </div>
+      <button onClick={resetButton} className="reset-button">
+        Reset
+      </button>
+    </>
   );
 }
 
